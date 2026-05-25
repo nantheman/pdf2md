@@ -1,41 +1,27 @@
 # pdf2md
 
-**High-quality PDF → Markdown converter** with beautiful web UI, batch processing, image extraction, and OCR fallback.
+**High-quality PDF to Markdown converter** — Local Desktop Edition
 
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
+Supports excellent layout preservation, image extraction, and OCR for scanned PDFs.
 
 ---
 
 ## ✨ Features
 
-- Excellent conversion quality using **PyMuPDF4LLM**
-- **Batch upload** with live progress bars
-- **Image extraction** (embedded as base64)
-- **OCR fallback** for scanned/image-only PDFs (Tesseract)
-- Clean dark-themed Streamlit UI
-- Full-featured Unix-style **CLI**
-- **FastAPI** endpoint for scripting / integration
-- Easy deployment via Docker, Streamlit Cloud, Railway, Fly.io
+- High-quality conversion using `pymupdf4llm`
+- **OCR fallback** for scanned/image-only PDFs
+- Image extraction (embedded as base64)
+- Beautiful local Streamlit web UI
+- Powerful Unix-style CLI tool
+- Batch processing support
 
 ---
 
-## Quick Start
+## Installation
 
-### 1. Local Development
+### 1. System Dependencies
+
+**macOS** (recommended):
 
 ```bash
-git clone https://github.com/YOURUSERNAME/pdf2md.git
-cd pdf2md
-
-# Install dependencies
-pip install -r requirements.txt
-
-# System dependencies (for OCR)
-# Ubuntu/Debian
-sudo apt install tesseract-ocr poppler-utils -y
-
-# Run web UI
-streamlit run app.py
+brew install poppler tesseract
